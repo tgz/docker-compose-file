@@ -1,0 +1,8 @@
+gohttpserver:
+    image: codeskyblue/gohttpserver
+    restart: unless-stopped
+    command: ./gohttpserver -r ./public --upload
+    ports:
+        - "8000:8000"
+    volumes:
+        - /home/data/plex_data/media:/app/public
